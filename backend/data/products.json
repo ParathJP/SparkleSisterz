@@ -1,0 +1,90 @@
+[
+  {
+    "id": "prod-001",
+    "name": "Terracotta Floral Necklace",
+    "description": "A beautifully handcrafted terracotta necklace featuring delicate floral motifs. Each piece is hand-painted with natural earthy tones, making it a unique wearable art. Perfect for ethnic wear and casual outfits.",
+    "price": 599,
+    "category": "Necklaces",
+    "images": [],
+    "stock": 15,
+    "featured": true,
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "prod-002",
+    "name": "Boho Terracotta Earrings",
+    "description": "Lightweight and elegant boho-style earrings crafted from pure terracotta clay. Adorned with hand-painted geometric patterns in rich earthy colors. Comfortable for all-day wear.",
+    "price": 349,
+    "category": "Earrings",
+    "images": [],
+    "stock": 25,
+    "featured": true,
+    "createdAt": "2024-01-02T00:00:00.000Z"
+  },
+  {
+    "id": "prod-003",
+    "name": "Tribal Terracotta Bracelet",
+    "description": "Inspired by tribal art, this terracotta bracelet features intricate hand-carved designs. A statement piece that complements both traditional and contemporary looks.",
+    "price": 299,
+    "category": "Bracelets",
+    "images": [],
+    "stock": 20,
+    "featured": true,
+    "createdAt": "2024-01-03T00:00:00.000Z"
+  },
+  {
+    "id": "prod-004",
+    "name": "Peacock Terracotta Pendant",
+    "description": "A stunning peacock-motif pendant handcrafted from terracotta clay with vibrant hand-painting. Comes with an adjustable cotton cord. A true showstopper piece.",
+    "price": 449,
+    "category": "Necklaces",
+    "images": [],
+    "stock": 10,
+    "featured": true,
+    "createdAt": "2024-01-04T00:00:00.000Z"
+  },
+  {
+    "id": "prod-005",
+    "name": "Traditional Jhumka Earrings",
+    "description": "Classic jhumka-style earrings in terracotta with gold paint detailing. Lightweight yet bold, these are perfect for festive occasions and cultural events.",
+    "price": 399,
+    "category": "Earrings",
+    "images": [],
+    "stock": 18,
+    "featured": true,
+    "createdAt": "2024-01-05T00:00:00.000Z"
+  },
+  {
+    "id": "prod-006",
+    "name": "Terracotta Anklet",
+    "description": "Delicate terracotta anklet with tiny hand-shaped beads. Adds a beautiful earthy charm to your feet. Adjustable size, suitable for most ankle sizes.",
+    "price": 249,
+    "category": "Anklets",
+    "images": [],
+    "stock": 30,
+    "featured": false,
+    "createdAt": "2024-01-06T00:00:00.000Z"
+  },
+  {
+    "id": "prod-007",
+    "name": "Mandala Terracotta Ring",
+    "description": "A one-of-a-kind ring featuring a beautiful mandala design carved into terracotta clay. Hand-painted with mehndi-style patterns. Available in adjustable size.",
+    "price": 199,
+    "category": "Rings",
+    "images": [],
+    "stock": 22,
+    "featured": false,
+    "createdAt": "2024-01-07T00:00:00.000Z"
+  },
+  {
+    "id": "prod-008",
+    "name": "Festival Jewellery Set",
+    "description": "A complete festive jewellery set including a necklace, earrings, and bangles — all handcrafted from terracotta. Perfectly coordinated with matching motifs and colors.",
+    "price": 999,
+    "category": "Sets",
+    "images": [],
+    "stock": 8,
+    "featured": true,
+    "createdAt": "2024-01-08T00:00:00.000Z"
+  }
+]
