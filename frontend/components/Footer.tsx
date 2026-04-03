@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Youtube, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">🌸</span>
+              <Image src="/logo.png" alt="Sparkle Sisterz" width={40} height={40} className="object-contain" />
               <div>
                 <span className="font-serif text-xl font-bold text-white block leading-none">Sparkle Sisterz</span>
                 <span className="text-xs text-terracotta-300 tracking-widest uppercase">Terracotta Jewellery</span>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
 export default function Hero() {
@@ -15,7 +16,20 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full bg-gold-400/20 blur-2xl" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          {/* Logo image on right */}
+          <div className="hidden md:flex justify-center items-center order-2">
+            <div className="relative w-80 h-80">
+              <Image
+                src="/logo.png"
+                alt="Sparkle Sisterz"
+                fill
+                className="object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
+
+        <div className="order-1">
           <div className="inline-flex items-center gap-2 bg-terracotta-100 text-terracotta-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <span>🌸</span>
             <span>Handcrafted with Love</span>
@@ -55,6 +69,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
 
