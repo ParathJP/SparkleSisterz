@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sparkle-sisterz-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      # The rest are set in the Render dashboard (they hold secrets):
+      # FRONTEND_URL, ADMIN_USERNAME, ADMIN_PASSWORD, JWT_SECRET,
+      # WHATSAPP_NUMBER, MONGODB_URI,
+      # CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET

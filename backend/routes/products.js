@@ -1,30 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const fs = require('fs');
-const multer = require('multer');
-const { v4: uuidv4 } = require('uuid');
 const authMiddleware = require('../middleware/auth');
 const Product = require('../models/Product');
-
-const UPLOADS_DIR = path.join(__dirname, '../uploads');
-if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, UPLOADS_DIR),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    cb(null, `${uuidv4()}${ext}`);
-  },
-});
-const upload = multer({
-  storage,
-  fileFilter: (req, file, cb) => {
-    const allowed = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
-    allowed.includes(file.mimetype) ? cb(null, true) : cb(new Error('Only JPEG, PNG, WebP allowed'));
-  },
-  limits: { fileSize: 5 * 1024 * 1024 },
-});
+const { upload, fileToUrl } = require('../config/upload');
 
 // GET /api/products — public
 router.get('/', async (req, res) => {
@@ -68,7 +46,7 @@ router.post('/', authMiddleware, upload.array('images', 5), async (req, res) => 
       return res.status(400).json({ message: 'Name, price, and category are required' });
     }
 
-    const imageUrls = req.files ? req.files.map((f) => `/uploads/${f.filename}`) : [];
+    const imageUrls = req.files ? req.files.map(fileToUrl) : [];
 
     const product = await Product.create({
       name,
@@ -91,7 +69,7 @@ router.put('/:id', authMiddleware, upload.array('images', 5), async (req, res) =
   try {
     const { name, description, price, category, stock, featured, existingImages } = req.body;
 
-    const newImages = req.files ? req.files.map((f) => `/uploads/${f.filename}`) : [];
+    const newImages = req.files ? req.files.map(fileToUrl) : [];
     const keptImages = existingImages
       ? Array.isArray(existingImages) ? existingImages : [existingImages]
       : [];
